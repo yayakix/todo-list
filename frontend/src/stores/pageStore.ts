@@ -3,6 +3,7 @@ import { create } from "zustand";
 export enum PageTypes {
   HOME = "HOME",
   TASK_LIST = "TASK_LIST",
+  NEW_TASK = "NEW_TASK",
 }
 export type PageStore = {
   page: string;
@@ -17,10 +18,7 @@ const usePageStore = create<PageStore>((set) => ({
     set((state) => ({
       prevPage: state.page,
       page: newPage,
-      // Example of updating prevPage as well
     })),
-  //   updatePage: (newPage) => set({ page: newPage }),
-  //   updatePrevPage: () => set((state) => ({ prevPage: state.page })),
 }));
 
 export default usePageStore;
