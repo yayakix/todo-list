@@ -1,3 +1,7 @@
+
+![Screenshot 2024-07-25 at 3 40 09 PM](https://github.com/user-attachments/assets/f2b101e8-1165-423d-9c93-19789b3e736b)
+
+
 // Vite + Express App with Clerk Integration
 ## General
 - Note that docker is running, it just isn't shown in the terminal
