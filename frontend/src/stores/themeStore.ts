@@ -55,8 +55,7 @@ const themeExamples = [
   },
 ];
 
-const useThemeStore = create<ThemeStore>((set) => {
-  console.log("bruh"); // Moved console.log inside the function body
+const useThemeStore = create<ThemeStore>(() => {
   return {
     themes: themeExamples.map((theme) => theme),
   };
