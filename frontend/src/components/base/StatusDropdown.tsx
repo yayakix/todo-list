@@ -1,12 +1,20 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { useState } from 'react';
+import { themeNames } from '../../stores/themeStore';
 import { progressTypes } from '../../stores/taskStore';
 
-const StatusDropdown = ({ onSelectStatus, listItem, dropdownOptions, defaultText }) => {
+interface StatusDropdownProps {
+    onSelectStatus: (status: any) => void;
+    listItem: { status: string };
+    dropdownOptions: themeNames[] | progressTypes[];
+    defaultText: string;
+}
+
+const StatusDropdown: React.FC<StatusDropdownProps> = ({ onSelectStatus, listItem, dropdownOptions, defaultText }) => {
     // const [selectedStatus, setSelectedStatus] = useState('');
 
-    const handleSelect = (status) => {
+    const handleSelect = (status: themeNames | progressTypes) => {
+        console.log(status)
         if (status !== listItem.status) {
             // setSelectedStatus(status);
             onSelectStatus(status); // Pass selected status to parent component
@@ -32,7 +40,7 @@ const StatusDropdown = ({ onSelectStatus, listItem, dropdownOptions, defaultText
                                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900"
                                 onClick={() => handleSelect(item)}
                             >
-                                {item}
+                                {String(item)}
                             </span>
                         </MenuItem>
                     ))}
