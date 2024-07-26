@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TaskListItem from "./TaskListItem";
 // import { allTasks } from "../../stores/exampletaskdata";
-import useTaskStore, { progressTypes } from "../../stores/taskStore";
+import useTaskStore from "../../stores/taskStore";
 
 type progressItem = {
     id: number;

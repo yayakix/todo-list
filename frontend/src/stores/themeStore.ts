@@ -1,6 +1,25 @@
 import { create } from "zustand";
 // import themeExamples from "./themeExamples.ts";
 
+export enum themeNames {
+  LIGHT = "LIGHT",
+  DARK = "DARK",
+  SOLARIZED_LIGHT = "SOLARIZED_LIGHT",
+  SOLARIZED_DARK = "SOLARIZED_DARK",
+}
+export type ThemeType = {
+  themeName: themeNames;
+  background: string;
+  text: string;
+  primary: string;
+  secondary: string;
+  accent: string;
+};
+
+export type ThemeStore = {
+  themes: ThemeType[];
+};
+
 const themeExamples = [
   {
     themeName: themeNames.LIGHT,
@@ -35,26 +54,6 @@ const themeExamples = [
     accent: "#FF4500",
   },
 ];
-
-export enum themeNames {
-  LIGHT = "LIGHT",
-  DARK = "DARK",
-  SOLARIZED_LIGHT = "SOLARIZED_LIGHT",
-  SOLARIZED_DARK = "SOLARIZED_DARK",
-}
-
-export type ThemeType = {
-  themeName: themeNames;
-  background: string;
-  text: string;
-  primary: string;
-  secondary: string;
-  accent: string;
-};
-
-export type ThemeStore = {
-  themes: ThemeType[];
-};
 
 const useThemeStore = create<ThemeStore>((set) => {
   console.log("bruh"); // Moved console.log inside the function body

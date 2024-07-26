@@ -2,7 +2,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-reac
 import usePageStore, { PageTypes } from "../../stores/pageStore";
 
 const Navbar = () => {
-    const { page, prevPage, updatePage } = usePageStore();
+    const { prevPage, updatePage } = usePageStore();
 
     return <header>
         <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
