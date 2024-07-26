@@ -28,38 +28,42 @@ export const allTasks = [
   {
     id: 41,
     status: progressTypes.ARCHIVED,
-    listContent:
-      "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.",
+    title: "eat lunch",
+    description: "what are we eating for dinner",
   },
   {
     id: 42,
     status: progressTypes.ARCHIVED,
-
-    listContent:
+    title: "apply to jobs",
+    description:
       "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.",
   },
   {
     id: 43,
     status: progressTypes.PENDING,
-    listContent:
-      "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more. Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more. Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.",
+    title: "Take test",
+    description:
+      "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.",
   },
   {
     id: 12,
     status: progressTypes.IN_PROGRESS,
-    listContent:
+    title: "Water the plants",
+    description:
       "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.",
   },
   {
     id: 31,
     status: progressTypes.COMPLETED,
-    listContent:
+    title: "Feed the fish",
+    description:
       "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.",
   },
   {
     id: 21,
     status: progressTypes.PENDING,
-    listContent:
+    title: "Walk the dogs",
+    description:
       "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.",
   },
 ];
