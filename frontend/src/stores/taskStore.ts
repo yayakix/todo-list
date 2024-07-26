@@ -8,15 +8,17 @@ export enum progressTypes {
   ARCHIVED = "Archived",
 }
 
-type Task = {
+export type TaskType = {
   id: number;
   status: progressTypes;
-  listContent: string;
+  title: string;
+  description?: string;
 };
 
 type TaskStore = {
-  tasks: Task[];
+  tasks: TaskType[];
   updateTaskStatus: (id: number, status: progressTypes) => void;
+  addTask: (newTask: TaskType) => void;
 };
 
 const useTaskStore = create<TaskStore>((set) => ({
@@ -27,6 +29,13 @@ const useTaskStore = create<TaskStore>((set) => ({
         task.id === id ? { ...task, status: status } : task
       ),
     })),
+  addTask: (newTask) => {
+    set((state) => {
+      return {
+        tasks: [...state.tasks, { ...newTask }],
+      };
+    });
+  },
 }));
 
 export default useTaskStore;
