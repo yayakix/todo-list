@@ -1,6 +1,7 @@
 import Navbar from "./components/base/Navbar";
 import TaskList from "./components/base/TaskList";
 import NewTask from "./components/pages/NewTask";
+import NewTheme from "./components/pages/NewTheme";
 import usePageStore, { PageTypes } from "./stores/pageStore";
 
 
@@ -17,6 +18,9 @@ export default function App() {
       break;
     case PageTypes.NEW_TASK:
       content = <NewTask />;
+      break;
+    case PageTypes.NEW_THEME:
+      content = <NewTheme />;
       break;
     // Add more cases as needed
     default:
