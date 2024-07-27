@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { allTasks } from "./exampletaskdata";
-import useThemeStore, { themeNames, ThemeType } from "./themeStore";
+import useThemeStore, { ThemeType } from "./themeStore";
 
 export enum progressTypes {
   IN_PROGRESS = "In Progress",
@@ -20,7 +20,7 @@ export type TaskType = {
 type TaskStore = {
   tasks: TaskType[];
   updateTaskStatus: (id: number, status: progressTypes) => void;
-  updateTaskTheme: (id: number, theme: themeNames) => void;
+  updateTaskTheme: (id: number, theme: string) => void;
   addTask: (newTask: TaskType) => void;
 };
 
@@ -32,7 +32,7 @@ const useTaskStore = create<TaskStore>((set) => ({
         task.id === id ? { ...task, status: status } : task
       ),
     })),
-  updateTaskTheme: (id, themeName: themeNames) => {
+  updateTaskTheme: (id, themeName) => {
     // Access the theme from useThemeStore
     const { themes } = useThemeStore.getState();
     const theme = themes.find((t) => t.themeName === themeName);
