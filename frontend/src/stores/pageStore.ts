@@ -4,6 +4,7 @@ export enum PageTypes {
   HOME = "HOME",
   TASK_LIST = "TASK_LIST",
   NEW_TASK = "NEW_TASK",
+  NEW_THEME = "NEW_THEME",
 }
 export type PageStore = {
   page: string;
