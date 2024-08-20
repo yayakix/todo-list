@@ -12,11 +12,16 @@
   "dependencies": {
     "@clerk/clerk-js": "^5.10.1",
     "@clerk/clerk-react": "^5.2.9",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
     "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sass": "^1.77.8",
     "uuid": "^10.0.0",
     "zustand": "^4.5.4"
   },

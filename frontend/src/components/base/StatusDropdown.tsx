@@ -20,7 +20,7 @@ const StatusDropdown: React.FC<StatusDropdownProps> = ({ onSelectStatus, listIte
     };
 
     return (
-        <Menu as="div" className="relative inline-block text-left" >
+        <Menu as="div" className="relative inline-block text-left border border-[#1A5319] rounded-md" >
             <div className=''>
                 <MenuButton style={{ border: `1px solid ${listItem.theme?.accent}` }} className={` inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold shadow-sm ${listItem.theme?.secondary} `}>
                     <span className={`${listItem.theme?.text}`}>
@@ -34,7 +34,7 @@ const StatusDropdown: React.FC<StatusDropdownProps> = ({ onSelectStatus, listIte
                 transition
                 className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
             >
-                <div className="py-1 bg-red-400">
+                <div className="py-1 bg-white">
                     {dropdownOptions.map((item, idx) => (
                         <MenuItem key={idx}>
                             <span
