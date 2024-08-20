@@ -58,14 +58,12 @@ const ProgressTab = (progressItem: progressItem) => {
                 <div className="p-5 border border-b-0 border-gray-200 ">
                     <div className="mb-2 text-gray-500 ">
                         <ul className="text-sm font-medium text-gray-900">
-                            {tasks.map((listItem) => {
-                                if (listItem.status === progressItem.title) {
-                                    return (
-                                        <TaskListItem key={listItem.id} {...listItem} />
-                                    );
-                                }
-                                return null;
-                            })}
+                            {tasks
+                                .filter(listItem => listItem.status === progressItem.title) // Filter tasks by status
+                                .reverse() // Reverse the order of the filtered tasks
+                                .map((listItem) => (
+                                    <TaskListItem key={listItem.id} {...listItem} />
+                                ))}
                         </ul>
                     </div>
                 </div>
