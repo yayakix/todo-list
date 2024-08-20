@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import usePageStore, { PageTypes } from "../../stores/pageStore";
 import useThemeStore, { ThemePropertyKeys, ThemeType } from "../../stores/themeStore";
 
 const NewTheme = () => {
     const { addTheme, themes } = useThemeStore();
-    const { updatePage } = usePageStore();
     console.log(themes)
 
     // Initial state for new theme with default values
