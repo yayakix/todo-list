@@ -5,6 +5,9 @@
 ## Live Link
 https://todolist-yaya.netlify.app/
 
+## TODO LIST
+Allows you to create list items that you can move into different task statuses. These tasks are saved in local storage for the user to revisit. 
+
 
 ## Resources
 - Clerk: https://clerk.com/docs/
