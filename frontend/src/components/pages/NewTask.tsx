@@ -27,6 +27,7 @@ const NewTask = () => {
         setTriggerAlert(true);
         // Reset triggerAlert to false after a slight delay
         setTimeout(() => setTriggerAlert(false), 100);
+        setTask({ title: '', description: '' });
     }
 
     return (
