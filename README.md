@@ -1,6 +1,6 @@
 
-![Screenshot 2024-07-25 at 3 40 09 PM](https://github.com/user-attachments/assets/f2b101e8-1165-423d-9c93-19789b3e736b)
 
+![Screenshot 2024-08-20 at 1 32 04 PM](https://github.com/user-attachments/assets/7dafa004-704b-476c-9106-a18c955449c4)
 
 // Vite + Express App with Clerk Integration
 ## General
