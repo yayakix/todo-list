@@ -32,6 +32,7 @@ export default function App() {
     <header>
       <div>
         <Navbar />
+            <div id="recura-form-widget"></div>
         {content}
       </div>
     </header>
